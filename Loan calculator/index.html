@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- META TAGS -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <title>Loan Calculator</title>
+    </head>
+
+    <body class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-body text-center mt-5 bg-danger">
+                        <h1 class="heading display-5 pb-3 bg-danger">Loan Calculator</h1>
+                        <form action="" id="loan-form">
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-dark">$</span>
+                                    <input type="number" class="form-control bg-white text-dark" id="amount"
+                                        placeholder="Loan Amount">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-dark">%</span>
+                                    <input type="number" class="form-control bg-white text-dark" id="interest"
+                                        placeholder="Interest">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="number" class="form-control bg-white text-dark" id="years" placeholder="Years to Repay">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary btn-block bg-success" value="CALCULATE">
+                            </div>
+                        </form>
+
+                        <div class="loader" id="loader" style="display:none">
+                            <img src="Load.gif" width="50%" height="50%" alt="Loading">
+                        </div>
+
+                        <div id="results" style="display:none">
+                            <h5>Results</h5>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-success">Monthly Payment</span>
+                                    <input type="number" class="form-control bg-info" id="monthly-payment" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-success">Total Payment</span>
+                                    <input type="number" class="form-control bg-info" id="total-payment" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white text-success">Total Interests</span>
+                                    <input type="number" class="form-control bg-info" id="total-interests" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-danger btn-block bg-dark text-light" id="reset" value="RESET">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
